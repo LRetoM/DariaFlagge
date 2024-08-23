@@ -35,7 +35,7 @@ const Leaderboard = () => {
         style={{ padding: "2rem", width: "100%", maxWidth: "600px" }}
       >
         <Typography variant="h4" align="center" gutterBottom>
-          {name}'s Punktzahl: {points}
+          {name}'s Score: {points}
         </Typography>
         <Typography
           style={{ color: "white" }}
@@ -43,7 +43,7 @@ const Leaderboard = () => {
           align="center"
           gutterBottom
         >
-          Bestenliste
+          Highscores:
         </Typography>
         <Box
           display="flex"
@@ -67,7 +67,7 @@ const Leaderboard = () => {
                 {entry.name}
               </Typography>
               <Typography variant="body1" color="white">
-                Punkte: {entry.points}
+                Score: {entry.points}
               </Typography>
             </Box>
           ))}
@@ -78,7 +78,7 @@ const Leaderboard = () => {
             color="primary"
             onClick={() => navigate("/")}
           >
-            Zum Anfang
+            Back to Start
           </Button>
         </Box>
       </Paper>

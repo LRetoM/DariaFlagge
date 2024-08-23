@@ -21,14 +21,19 @@ import { styled } from "@mui/material/styles";
 
 // Gestylter Button mit Material-UI
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#FFFFFF",
-  color: "#000000",
-  borderRadius: "8px",
-  padding: "10px 20px",
-  margin: "10px",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "#007BFF",
+  color: "#FFFFFF",
+  borderRadius: "12px",
+  padding: "12px 24px",
+  margin: "15px",
+  fontWeight: "bold",
+  fontSize: "1.1rem",
+  textTransform: "uppercase",
+  boxShadow: "0 6px 8px rgba(0, 0, 0, 0.15)",
+  transition: "background-color 0.3s ease, transform 0.2s ease",
   "&:hover": {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#0056b3",
+    transform: "translateY(-2px)",
   },
 }));
 
@@ -65,17 +70,35 @@ const Home = () => {
       alignItems="center"
       height="100vh"
     >
-      <Paper elevation={3} style={{ padding: "2rem", textAlign: "center" }}>
-        <Typography variant="h4" gutterBottom>
-          Hallo {name}
+      <Paper
+        elevation={5}
+        style={{
+          marginTop: "-10rem",
+          padding: "3rem",
+          textAlign: "center",
+          borderRadius: "20px",
+          maxWidth: "500px",
+          width: "100%",
+        }}
+      >
+        <Typography
+          variant="h3"
+          gutterBottom
+          style={{
+            fontWeight: "bold",
+            color: "#FFFFFF",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Welcome {name}
         </Typography>
-        <Stack spacing={2} direction="row" justifyContent="center">
+        <Stack spacing={3} direction="column" justifyContent="center">
           <StyledButton onClick={handleStart}>Start</StyledButton>
           <StyledButton onClick={() => dispatch(setDisplayDialog(true))}>
-            Namen Ändern
+            Change Name
           </StyledButton>
           <StyledButton onClick={() => navigate("/Leaderboard")}>
-            Zur Bestenliste
+            Highscores
           </StyledButton>
         </Stack>
       </Paper>

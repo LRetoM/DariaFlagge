@@ -19,10 +19,10 @@ const Head = ({ currentCountry }) => {
   return (
     <Box mb={3} textAlign="center">
       <Typography variant="h5" style={{ color: "#c2b040" }}>
-        Punkte: {points}
+        Score: {points}
       </Typography>
       <Typography variant="h5" style={{ color: "#c2b040" }}>
-        Leben: {lifes}
+        Lives: {lifes}
       </Typography>
     </Box>
   );
